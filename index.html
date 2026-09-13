@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Анастасия Утинанс — психолог</title>
+  <meta name="description" content="Психологическая помощь: внутренняя опора, границы, тревога, выгорание и сложные жизненные решения.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23352723'/%3E%3Cpath d='M15 17h34v24H31l-9 8v-8h-7z' fill='%23f5efe8'/%3E%3C/svg%3E">
+  <style>
+    :root{--ink:#302420;--brown:#4d3029;--brown2:#6a4338;--cream:#f4efe8;--paper:#fffaf4;--silver:#c8c5c0;--muted:#786b66;--line:rgba(77,48,41,.18)}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,Helvetica,sans-serif;font-size:17px;line-height:1.55}
+    a{color:inherit;text-decoration:none}
+    button{font:inherit}
+    .shell{width:min(1180px,calc(100% - 40px));margin:auto}
+    .nav{height:82px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+    .brand{font-family:Georgia,serif;font-size:20px;letter-spacing:.02em}
+    .brand span{display:block;font:11px Arial,sans-serif;text-transform:uppercase;letter-spacing:.19em;color:var(--muted);margin-top:3px}
+    .navlinks{display:flex;align-items:center;gap:28px;font-size:14px}
+    .navlinks .mini{border:1px solid var(--brown);padding:10px 17px;border-radius:999px}
+    .hero{min-height:690px;display:grid;grid-template-columns:1.05fr .95fr;gap:70px;align-items:center;padding:58px 0 80px}
+    .eyebrow{display:flex;align-items:center;gap:12px;text-transform:uppercase;letter-spacing:.18em;font-size:12px;color:var(--brown2);font-weight:700}
+    .eyebrow:before{content:"";width:34px;height:1px;background:var(--brown2)}
+    h1,h2,h3{font-family:Georgia,serif;font-weight:400;margin:0}
+    h1{font-size:clamp(52px,6vw,86px);line-height:.96;letter-spacing:-.055em;margin:26px 0}
+    h1 em{display:block;color:var(--brown2);font-weight:400}
+    .lead{font-size:20px;max-width:590px;color:#584b47;margin:0 0 32px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 23px;border-radius:999px;border:1px solid var(--brown);font-weight:700;font-size:15px;transition:.2s}
+    .btn.primary{background:var(--brown);color:#fff}
+    .btn:hover{transform:translateY(-2px)}
+    .portrait-wrap{position:relative;padding:0 30px 30px 0}
+    .portrait{position:relative;height:555px;overflow:hidden;border-radius:220px 220px 32px 32px;background:#d6d0c8;box-shadow:0 24px 70px rgba(48,36,32,.18)}
+    .portrait img{width:100%;height:100%;object-fit:cover;object-position:52% 44%;filter:saturate(.82) contrast(1.02)}
+    .portrait:after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(48,36,32,.18),transparent 45%)}
+    .quote-tag{position:absolute;z-index:2;right:0;bottom:0;width:245px;padding:21px 24px;background:var(--paper);border:1px solid var(--line);border-radius:26px 26px 4px 26px;box-shadow:0 15px 45px rgba(48,36,32,.14);font-family:Georgia,serif;font-size:21px;line-height:1.22}
+    .quote-tag:after{content:"";position:absolute;right:22px;bottom:-14px;border:15px solid transparent;border-top-color:var(--paper);transform:rotate(-18deg)}
+    .section{padding:95px 0}
+    .section.dark{background:var(--ink);color:var(--cream)}
+    .section-head{display:grid;grid-template-columns:.85fr 1.15fr;gap:90px;align-items:start;margin-bottom:55px}
+    h2{font-size:clamp(39px,4.4vw,64px);line-height:1.04;letter-spacing:-.035em}
+    .about-copy{font-size:19px;color:#5f524d;max-width:620px}
+    .about-copy p:first-child{margin-top:0}
+    .facts{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .fact{padding:34px 28px;min-height:175px;border-right:1px solid var(--line)}
+    .fact:last-child{border-right:0}
+    .fact small{display:block;text-transform:uppercase;letter-spacing:.15em;font-size:11px;color:var(--brown2);font-weight:700;margin-bottom:18px}
+    .fact h3{font-size:26px;line-height:1.15;margin-bottom:10px}
+    .fact p{margin:0;color:var(--muted);font-size:15px}
+    .generator-intro{display:grid;grid-template-columns:.72fr 1.28fr;gap:80px;align-items:center}
+    .generator-copy .eyebrow{color:#d1b8aa}.generator-copy .eyebrow:before{background:#d1b8aa}
+    .generator-copy h2{margin:24px 0}
+    .generator-copy p{color:#c8bdb8;max-width:450px;margin-bottom:30px}
+    .deck{position:relative;min-height:470px;display:grid;place-items:center}
+    .card{position:absolute;width:min(590px,92%);aspect-ratio:3/2;border-radius:34px 34px 8px 34px;box-shadow:0 28px 70px rgba(0,0,0,.32);transition:transform .5s ease,opacity .32s ease;overflow:hidden;background:#b29a8d}
+    .card:after{content:"";position:absolute;right:30px;bottom:-18px;border:30px solid transparent;border-top-color:#f2eae2;transform:rotate(-16deg)}
+    .card.back2{transform:translate(30px,-25px) rotate(5deg);opacity:.42}
+    .card.back1{transform:translate(-26px,-12px) rotate(-5deg);opacity:.65}
+    .card.front{position:relative;background:#f2eae2;z-index:3}
+    .card-image{width:100%;height:100%;object-fit:cover;display:block;transition:opacity .22s ease,transform .35s ease}
+    .card-tools{position:absolute;left:18px;right:18px;bottom:16px;z-index:5;display:flex;justify-content:space-between;align-items:center;pointer-events:none}
+    .card-count{padding:8px 13px;border-radius:999px;background:rgba(35,24,20,.74);backdrop-filter:blur(8px);color:#fff;font-size:12px;letter-spacing:.05em}
+    .shuffle{pointer-events:auto;width:48px;height:48px;border:1px solid rgba(255,255,255,.7);border-radius:50%;background:rgba(35,24,20,.75);cursor:pointer;color:#fff;box-shadow:0 8px 24px rgba(0,0,0,.2)}
+    .shuffle:hover{background:var(--brown)}
+    .dojo{padding:95px 0;background:linear-gradient(135deg,#4d3029,#2b211e);color:var(--cream)}
+    .dojo-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:70px;align-items:center}
+    .dojo h2{margin:22px 0}.dojo p{color:#d4c7c1;max-width:650px;font-size:18px}
+    .dojo-points{display:flex;gap:10px;flex-wrap:wrap;margin:28px 0 34px}
+    .dojo-points span{border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:9px 14px;font-size:13px;color:#eadfd9}
+    .dojo-card{background:var(--paper);color:var(--ink);padding:34px;border-radius:32px 32px 8px 32px;box-shadow:0 26px 65px rgba(0,0,0,.3)}
+    .dojo-card small{display:block;text-transform:uppercase;letter-spacing:.15em;color:var(--brown2);font-weight:700;margin-bottom:15px}
+    .dojo-card h3{font-size:30px;line-height:1.1;margin-bottom:14px}.dojo-card p{color:var(--muted);font-size:15px;margin:0}
+    .contacts{padding:100px 0 75px;background:var(--paper)}
+    .contact-box{border:1px solid var(--line);border-radius:38px;padding:60px;display:grid;grid-template-columns:1fr 1fr;gap:75px;align-items:end;background:linear-gradient(135deg,rgba(255,255,255,.7),rgba(232,220,211,.4))}
+    .contact-box h2{margin:20px 0 0}
+    .contact-list{display:grid;gap:12px}
+    .contact-link{display:flex;justify-content:space-between;align-items:center;padding:18px 2px;border-bottom:1px solid var(--line);font-weight:700}
+    .contact-link span{color:var(--muted);font-weight:400;font-size:14px}
+    .telegram-panel{grid-column:1/-1;display:grid;grid-template-columns:1fr 200px;gap:45px;align-items:center;margin-top:26px;padding-top:30px;border-top:1px solid var(--line)}
+    .telegram-panel h3{font-size:27px;margin-bottom:10px}.telegram-panel p{color:var(--muted);font-size:15px;margin:0}
+    .telegram-qr{width:200px;border-radius:22px;display:block;box-shadow:0 12px 35px rgba(48,36,32,.15)}
+    footer{display:flex;justify-content:space-between;padding:34px 0;color:var(--muted);font-size:13px}
+    @media(max-width:800px){
+      .shell{width:min(100% - 28px,680px)}.nav{height:70px}.navlinks a:not(.mini){display:none}
+      .hero{grid-template-columns:1fr;gap:42px;padding:48px 0 70px}.hero-copy{order:1}.portrait-wrap{order:2;padding-right:18px}
+      h1{font-size:52px}.lead{font-size:17px}.portrait{height:480px}.quote-tag{width:220px;font-size:18px}
+      .section{padding:70px 0}.section-head,.generator-intro,.dojo-grid,.contact-box{grid-template-columns:1fr;gap:38px}.section-head{margin-bottom:38px}
+      .facts{grid-template-columns:1fr}.fact{border-right:0;border-bottom:1px solid var(--line);min-height:auto;padding:27px 5px}.fact:last-child{border-bottom:0}
+      .generator-intro{align-items:start}.generator-copy p{margin-bottom:0}.deck{min-height:330px}.card{width:96%;border-radius:25px 25px 7px 25px}
+      .contact-box{padding:34px 24px;border-radius:28px}.telegram-panel{grid-template-columns:1fr;justify-items:start}.telegram-qr{width:min(260px,100%)}footer{display:block}footer span{display:block;margin-top:6px}
+    }
+  </style>
+</head>
+<body>
+  <header class="shell nav">
+    <a class="brand" href="#top">Анастасия Утинанс<span>психолог</span></a>
+    <nav class="navlinks" aria-label="Навигация">
+      <a href="#about">Обо мне</a><a href="#messages">Послания</a><a class="mini" href="#contacts">Связаться</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="shell hero">
+      <div class="hero-copy">
+        <div class="eyebrow">Психолог · Караганда и онлайн</div>
+        <h1>Важное начинается <em>с честного диалога</em></h1>
+        <p class="lead">Помогаю разобраться в себе, вернуть внутреннюю опору и действовать яснее — в отношениях, работе и сложных жизненных ситуациях.</p>
+        <div class="actions">
+          <a class="btn primary" href="https://wa.me/77057632858">Написать в WhatsApp</a>
+          <a class="btn" href="#messages">Получить послание</a>
+        </div>
+      </div>
+      <div class="portrait-wrap">
+        <div class="portrait"><img src="anastasia.jpg" alt="Анастасия Утинанс, психолог"></div>
+        <div class="quote-tag">Без оценки. Без давления. С уважением к вашему темпу.</div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="shell">
+        <div class="section-head">
+          <h2>Я вижу не только проблему. Я вижу человека.</h2>
+          <div class="about-copy">
+            <p>Я — практикующий психолог. Работаю с теми, кто устал быть удобным, теряет себя в тревоге или выгорании, стоит перед важным решением и хочет опираться на себя.</p>
+            <p>Моя задача — не дать готовый совет, а помочь увидеть суть, собрать внутреннюю ясность и найти шаг, который действительно подходит вам.</p>
+          </div>
+        </div>
+        <div class="facts">
+          <article class="fact"><small>01 · состояние</small><h3>Тревога и выгорание</h3><p>Когда сил всё меньше, а внутреннее напряжение не отпускает.</p></article>
+          <article class="fact"><small>02 · отношения</small><h3>Границы и самоценность</h3><p>Когда хочется перестать угождать и начать выбирать себя.</p></article>
+          <article class="fact"><small>03 · движение</small><h3>Доход и самореализация</h3><p>Когда пора выйти из внутреннего тупика и перейти к действиям.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark" id="messages">
+      <div class="shell generator-intro">
+        <div class="generator-copy">
+          <div class="eyebrow">Метафорические карты</div>
+          <h2>Иногда один образ говорит точнее сотни советов.</h2>
+          <p>Остановитесь на несколько секунд. Задайте себе вопрос и выберите послание, которое хочется услышать именно сейчас.</p>
+          <button class="btn primary" type="button" onclick="nextCard()">Выбрать карту</button>
+        </div>
+        <div class="deck" aria-live="polite">
+          <div class="card back2"></div><div class="card back1"></div>
+          <article class="card front">
+            <img class="card-image" id="cardImage" src="cards/card-01.webp" alt="Метафорическая карта с посланием">
+            <div class="card-tools"><span class="card-count" id="cardCount">1 из 30</span><button class="shuffle" onclick="nextCard()" aria-label="Выбрать другую карту">↻</button></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="dojo" id="dojo">
+      <div class="shell dojo-grid">
+        <div>
+          <div class="eyebrow">AI‑тренажёр CorpDojo</div>
+          <h2>Потренируйте сложный разговор до того, как он случится.</h2>
+          <p>Безопасная практика диалогов с руководителем, коллегой или клиентом. Тренажёр помогает не растеряться под давлением, отстоять границы и подобрать точные слова.</p>
+          <div class="dojo-points"><span>Сложные разговоры</span><span>Границы</span><span>Манипуляции</span><span>Выгорание</span></div>
+          <a class="btn primary" href="https://t.me/corpdojo_bot" target="_blank" rel="noopener">Попробовать AI‑тренажёр</a>
+        </div>
+        <aside class="dojo-card">
+          <small>Виртуальная тренировка</small>
+          <h3>Знать, как правильно, — недостаточно.</h3>
+          <p>Важно суметь сказать это в реальной ситуации. CorpDojo даёт возможность попробовать, получить обратную связь и повторить.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="contacts" id="contacts">
+      <div class="shell">
+        <div class="contact-box">
+          <div><div class="eyebrow">Контакты</div><h2>Можно начать с одного сообщения.</h2></div>
+          <div class="contact-list">
+            <a class="contact-link" href="https://wa.me/77057632858">WhatsApp <span>+7 705 763 28 58 →</span></a>
+            <a class="contact-link" href="https://instagram.com/anastasia.utinans.psiholog">Instagram <span>@anastasia.utinans.psiholog →</span></a>
+            <a class="contact-link" href="#telegram">Telegram <span>сканировать QR →</span></a>
+            <a class="contact-link" href="https://t.me/corpdojo_bot" target="_blank" rel="noopener">AI‑тренажёр CorpDojo <span>открыть бота →</span></a>
+          </div>
+          <div class="telegram-panel" id="telegram">
+            <div><h3>Мой Telegram</h3><p>Наведите камеру телефона на QR-код, чтобы открыть мой профиль.</p></div>
+            <img class="telegram-qr" src="telegram-qr.webp" alt="QR-код Telegram Анастасии Утинанс">
+          </div>
+        </div>
+        <footer>© 2026 Анастасия Утинанс <span>Психолог · очно и онлайн</span></footer>
+      </div>
+    </section>
+  </main>
+  <script>
+    const cards=Array.from({length:30},(_,i)=>`cards/card-${String(i+1).padStart(2,'0')}.webp`);
+    let current=0, queue=[];
+    function refillQueue(){
+      queue=cards.map((_,i)=>i).filter(i=>i!==current);
+      for(let i=queue.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[queue[i],queue[j]]=[queue[j],queue[i]]}
+    }
+    function nextCard(){
+      if(!queue.length) refillQueue();
+      current=queue.pop();
+      const image=document.getElementById('cardImage');
+      image.style.opacity='0';image.style.transform='scale(.975)';
+      setTimeout(()=>{image.src=cards[current];image.onload=()=>{image.style.opacity='1';image.style.transform='scale(1)'};document.getElementById('cardCount').textContent=`${current+1} из ${cards.length}`},220);
+    }
+    cards.forEach(src=>{const img=new Image();img.src=src});
+  </script>
+</body>
+</html>
